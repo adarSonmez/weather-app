@@ -17,7 +17,7 @@ body {
 }
 
 .form {
-    margin-bottom: 14px;
+    margin: 1px 0 14px 0;
 }
 
 input {
@@ -33,9 +33,8 @@ input {
 }
 
 .app {
-    width: 50%;
-    min-width: 340px;
-    max-width: 360px;
+    width: 350px;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -89,4 +88,15 @@ th {
 
 td {
     width: 79px;
+}
+
+@media screen and (max-width: 400px) {
+    .app {
+        width: 80vw;
+        height: auto;
+    }
+
+    body {
+        height: auto;
+    }
 }
