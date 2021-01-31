@@ -1,6 +1,6 @@
 # Weather App 🌦️
 
-[**LİVE DEMO HERE!**](https://adarsonmez.github.io/weather-app/){:target="_blank"}
+[**LİVE DEMO HERE!**](https://adarsonmez.github.io/weather-app/)
 
 ![Screenshoot](media/ss01.png)
 ![Screenshoot](media/ss02.png)
