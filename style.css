@@ -90,15 +90,21 @@ td {
     width: 79px;
 }
 
-@media screen and (max-width: 400px) {
-    .app {
-        width: 90vw;
+@media screen and (max-width: 700px) {
+    body {
         height: auto;
-        margin-bottom: 10px;
     }
 
-    form {
-        margin-top: 3px;
+    .app {
+        margin-bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .app {
+        width: 93vw;
+        height: auto;
+        margin-bottom: 10px;
     }
 
     body {
