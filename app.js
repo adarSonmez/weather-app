@@ -39,7 +39,9 @@ form.onsubmit = (e) => {
       const respData = await response.json();
       changeDOM(respData);
     } catch (err) {
-      window.alert('Please check your internet connection.');
+      window.alert(
+        'Make sure you typed the correct location. If you are sure, check your internet connection.'
+      );
     }
   }
 
