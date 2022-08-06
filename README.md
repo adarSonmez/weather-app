@@ -1,6 +1,6 @@
-# Weather App 🌦️
+# Weather App (PWA) 🌦️
 
-[**LİVE DEMO HERE!**](https://adarsonmez.github.io/weather-app/)
+[**VISIT WEBSITE!**](https://adarsonmez-weather-pwa.netlify.app)
 
 ![Screenshoot](media/ss01.png)
 ![Screenshoot](media/ss02.png)

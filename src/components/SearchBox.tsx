@@ -1,9 +1,9 @@
 import { FormEvent, useEffect, useRef, useState } from 'react'
 
 function SearchBox({
-  getWeatherBySearch,
+  handleSearch,
 }: {
-  getWeatherBySearch: (e: FormEvent<HTMLFormElement>, CITY: string) => void
+  handleSearch: (e: FormEvent<HTMLFormElement>, CITY: string) => void
 }) {
   const [search, setSearch] = useState('')
   const inputRef = useRef<HTMLInputElement>(null)
@@ -23,7 +23,7 @@ function SearchBox({
       className="form"
       id="form"
       onSubmit={(e) => {
-        getWeatherBySearch(e, search)
+        handleSearch(e, search)
         setSearch('')
       }}
     >
