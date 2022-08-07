@@ -21,9 +21,11 @@ export type WeatherData = {
 function WeatherContainer({
   opacity,
   fetchedData,
+  error,
 }: {
   opacity: number
   fetchedData: any
+  error: string
 }) {
   const [weather, setWeather] = useState({
     city: '',
@@ -41,30 +43,39 @@ function WeatherContainer({
   })
 
   useEffect(() => {
-    console.log(fetchedData)
-    setWeather({
-      city: fetchedData.name,
-      country: fetchedData.sys.country,
-      temperature: Math.floor(fetchedData.main.temp - 273),
-      description: fetchedData.weather[0].description,
-      icon: `http://openweathermap.org/img/wn/${fetchedData.weather[0].icon}@2x.png`,
-      humidity: fetchedData.main.humidity + '%',
-      feels: Math.floor(fetchedData.main.feels_like - 273) + '°C',
-      visibility: fetchedData.visibility + ' m',
-      pressure: fetchedData.main.pressure + ' hPa',
-      longitude: fetchedData.coord.lon,
-      latitude: fetchedData.coord.lat,
-      windSpeed: fetchedData.wind.speed + ' m/s',
-    })
+    if (fetchedData)
+      setWeather({
+        city: fetchedData.name,
+        country: fetchedData.sys.country,
+        temperature: Math.floor(fetchedData.main.temp - 273),
+        description: fetchedData.weather[0].description,
+        icon: `http://openweathermap.org/img/wn/${fetchedData.weather[0].icon}@2x.png`,
+        humidity: fetchedData.main.humidity + '%',
+        feels: Math.floor(fetchedData.main.feels_like - 273) + '°C',
+        visibility: fetchedData.visibility + ' m',
+        pressure: fetchedData.main.pressure + ' hPa',
+        longitude: fetchedData.coord.lon,
+        latitude: fetchedData.coord.lat,
+        windSpeed: fetchedData.wind.speed + ' m/s',
+      })
   }, [fetchedData])
 
   return (
-    <main className="app" id="app" style={{ opacity: opacity }}>
-      <div className="inner-screen">
-        <Location data={weather} />
-        <DegreeSection data={weather} />
-        <DetailsTable data={weather} />
-      </div>
+    <main
+      className="app"
+      id="app"
+      data-testid="app"
+      style={{ opacity: opacity }}
+    >
+      {error === '' ? (
+        <div className="inner-screen">
+          <Location data={weather} />
+          <DegreeSection data={weather} />
+          <DetailsTable data={weather} />
+        </div>
+      ) : (
+        <div className='error-message'>{error}</div>
+      )}
     </main>
   )
 }

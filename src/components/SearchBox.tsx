@@ -34,7 +34,7 @@ function SearchBox({
         className="search"
         id="search"
         name="search"
-        placeholder="search location.."
+        placeholder="search location..."
         type="search"
         onChange={handleChange}
         value={search}

@@ -16,31 +16,45 @@ function DetailsTable({ data }: { data: WeatherData }) {
       <tbody>
         <tr>
           <th>Humidity:</th>
-          <td id="humidity">{humidity}</td>
+          <td id="humidity" data-testid="humidity">
+            {humidity}
+          </td>
         </tr>
         <tr>
           <th>Feels like:</th>
-          <td id="feels">{feels}</td>
+          <td id="feels" data-testid="feels">
+            {feels}
+          </td>
         </tr>
         <tr>
           <th>Visibility:</th>
-          <td id="visibility">{visibility}</td>
+          <td id="visibility" data-testid="visibility">
+            {visibility}
+          </td>
         </tr>
         <tr>
           <th>Pressure:</th>
-          <td id="pressure">{pressure}</td>
+          <td id="pressure" data-testid="pressure">
+            {pressure}
+          </td>
         </tr>
         <tr>
           <th>Longitude:</th>
-          <td id="longitude">{longitude}</td>
+          <td id="longitude" data-testid="longitude">
+            {longitude}
+          </td>
         </tr>
         <tr>
           <th>Latitude:</th>
-          <td id="latitude">{latitude}</td>
+          <td id="latitude" data-testid="latitude">
+            {latitude}
+          </td>
         </tr>
         <tr>
           <th>Wind speed:</th>
-          <td id="windSpeed">{windSpeed}</td>
+          <td id="windSpeed" data-testid="windSpeed">
+            {windSpeed}
+          </td>
         </tr>
       </tbody>
     </table>
